@@ -1,0 +1,173 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+* {
+    margin: 0px;
+    border-style: none;
+    padding: 0px;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    background-color: #F2F2F2;
+    height: auto;
+}
+
+header {
+    background-color: #642116;
+    color: #F2F2F2;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+}
+
+footer {
+    background-color: #36402C;
+    color: #F2F2F2;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    clear: both;
+}
+
+form {
+    background-color: #BFBB7A;
+    width: 33%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+form input {
+    width: calc(100% - 8px);
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.button-1 {
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    background-color: #F2F2F2;
+}
+
+.button-2 {
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    float: right;
+    background-color: #642116;
+    color: #F2F2F2;
+}
+
+.button-cad {
+    padding: 5px;
+    background-color: #36402C;
+    color: #F2F2F2;
+    text-decoration: none;
+}
+
+.button-cad:hover {
+    background-color: #737048;
+}
+
+h2 {
+    padding-top: 30px;
+    color: #36402C;
+    text-align: center;
+    clear: both;
+}
+
+h3 {
+    color: #36402C;
+    text-align: center;
+    text-shadow: #F2F2F2 1px 1px;
+}
+
+.login {
+    padding-bottom: calc(100vh - 306px - 52px - 42px);
+    background-image: url(imagens/planodefundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.centralizar {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+nav {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li a {
+    background-color: #642116;
+    color: #F2F2F2;
+    padding: 6px;
+    float: left;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #7e392e;
+}
+
+.nav-ativo {
+    background-color: #7e392e;
+    cursor: pointer;
+}
+
+.nav-cadastrar {
+    margin-left: 15px;
+    background-color: #36402C;
+}
+
+.nav-cadastrar:hover {
+    background-color: #737048;
+}
+
+.nav-cadastrar-ativo, .nav-cadastrar-ativo:hover {
+    cursor: pointer;
+    margin-left: 15px;
+    background-color: #737048
+}
+
+.nav-sair {
+    float: right;
+    margin-right: 15px;
+}
+
+.painel {
+    clear: both;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dados {
+    float: left;
+    width: calc(70% - 2px - 4px);
+    border: thin solid #ccc;
+    padding: 2px;
+}
+.apagar {
+    float: left;
+    width: calc(15% - 2px - 4px);
+    border: thin solid #ccc;
+    padding: 2px;
+}
+.editar {
+    float: left;
+    width: calc(15% - 2px - 4px);
+    border: thin solid #ccc;
+    padding: 2px;
+}
+
