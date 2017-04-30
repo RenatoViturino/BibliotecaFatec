@@ -5,9 +5,9 @@
 
     <form>
         <label for="email">Email</label>
-        <input type="email" id="email">
+            <input type="email" id="email">
         <label for="senha">Senha</label>
-        <input type="password" id="senha">
+             <input type="password" id="senha">
         <button type="submit" class="button-1">Esqueci minha senha</button>
         <button type="submit" class="button-2">Entrar</button>
         
