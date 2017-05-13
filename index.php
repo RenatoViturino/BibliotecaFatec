@@ -13,10 +13,10 @@
         
     </form>
 
-<h3>Ainda não tem uma conta?</h3>
-<div class="centralizar">
-<a href="cadastro.php" class="button-cad">Cadastra-se!</a>
-</div>
+        <h3>Ainda não tem uma conta?</h3>
+    <div class="centralizar">
+        <a href="cadastro.php" class="button-cad">Cadastra-se!</a>
+    </div>
     
 </div>
 

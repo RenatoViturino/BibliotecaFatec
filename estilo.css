@@ -88,7 +88,7 @@ h3 {
 
 .login {
     padding-bottom: calc(100vh - 306px - 52px - 42px);
-    background-image: url(imagens/planodefundo.jpg);
+    background-image:url(imagens/fundo.jpg) ;
     background-repeat: no-repeat;
     background-size: cover;
 }
