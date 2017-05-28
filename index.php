@@ -3,7 +3,7 @@
 <div class="login">
 <h2>Entre com a sua conta</h2>
 
-    <form>
+    <form class="form">
         <label for="email">Email</label>
             <input type="email" id="email">
         <label for="senha">Senha</label>
