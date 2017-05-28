@@ -1,5 +1,5 @@
 <?php
 
-$con = mysqli_connect("127.0.0.1", "root", "", "biblioteca");
+$con = new PDO("mysql:host=localhost; dbname=biblioteca", "root", "");
 
 ?>

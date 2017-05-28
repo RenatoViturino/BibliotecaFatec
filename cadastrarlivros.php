@@ -1,4 +1,36 @@
 <?php require_once 'cabecalho.php'; ?>
+<?php
+
+require_once 'conexao.php';
+
+if(
+	!empty($_POST["nome"]) &&
+	!empty($_POST["isbn"]) &&
+	!empty($_POST["autor"]) &&
+	!empty($_POST["editora"]) &&
+	!empty($_POST["edicao"])
+) {
+	$cadastrar = true;
+}
+	else {
+		$cadastrar = false;
+	}
+
+if($cadastrar) {
+	
+$inserir = $con->prepare("INSERT INTO tbLivros (isbnLivro, nomeLivro, autorLivro, editoraLivro, edicaoLivro) 
+VALUES (:isbnLivro, :nomeLivro, :autorLivro, :editoraLivro, :edicaoLivro)");
+    $inserir->bindParam(':isbnLivro', $_POST["isbn"]);
+    $inserir->bindParam(':nomeLivro', $_POST["nome"]);
+	$inserir->bindParam(':autorLivro', $_POST["autor"]);
+	$inserir->bindParam(':editoraLivro', $_POST["editora"]);
+	$inserir->bindParam(':edicaoLivro', $_POST["edicao"]);
+    $inserir->execute();
+	
+	header("Location: livros.php");
+}
+	
+?>
 
 <nav>
     <ul>
@@ -11,7 +43,7 @@
 
 <h2>Novo cadastro de livro</h2>
 
-<form action="salvarLivro.php" method="post">
+<form method="post" class="form">
     <label for="nome">Nome do livro</label>
     <input type="text" id="nome" name="nome">
     <label for="autor">Autor</label>
