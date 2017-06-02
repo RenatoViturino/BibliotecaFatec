@@ -12,16 +12,55 @@
 <div class="painel">
 
     <h2>Lista de livros</h2>
-    
-    <div class="dados">
-        Teste
-    </div>
-    <div class="editar">
-        Teste
-    </div>
-    <div class="apagar">
-        Teste
-    </div>
+	
+	<?php
+	require_once 'conexao.php';
+	
+	$consulta = $con->query("SELECT isbnLivro, isbnLivro FROM tbLivros");
+	$resultado = $consulta->fetchAll();
+	if($resultado) {
+		
+		$apagar = (!empty($_POST['apagar'])) ? $_POST['apagar'] : null;
+		
+		
+		if($apagar) {
+			$deletar = $con->prepare("DELETE FROM tbLivros WHERE isbnLivro = :isbnLivro");
+			$deletar->bindParam(':isbnLivro', $apagar);
+			$deletar->execute();
+		}
+		$apagar = null;
+		
+		$consulta = $con->query("SELECT nomeLivro, isbnLivro FROM tbLivros");
+		$resultado = $consulta->fetchAll();
+		if(!$resultado) {
+			echo '<h3>Nenhum livro cadastrado!</h3>';
+		}
+		
+		foreach($resultado as $dado) {
+			echo ('
+				<div class="dados">' .
+					$dado['nomeLivro'] .
+				'</div>
+				<div class="editar">
+					<form method="post" action="editarlivro.php">
+                    <button type="submit" name="editar" value="'. $dado['isbnLivro'] . '">Editar</button>
+                </form>
+				</div>' .
+				'<div class="apagar">
+					<form method="post">
+                    <button type="submit" name="apagar" value="'. $dado['isbnLivro'] . '">Apagar</button>
+                </form>
+				</div>
+				');
+		}
+		
+	}
+		else {
+			echo '<h3>Nenhum livro cadastrado!</h3>';
+		}
+	
+	
+	?>
     
 </div>
 
